@@ -14,6 +14,7 @@
 #define RSXTX_PIN     27
 
 #include <SoftwareSerial.h>
+#include "simcom.h"
 
 SoftwareSerial SerialGSM(GSMRX_PIN, GSMTX_PIN);
 SoftwareSerial SerialRSX(RSXRX_PIN, RSXTX_PIN);
