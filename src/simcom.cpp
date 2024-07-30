@@ -6,12 +6,27 @@ simcom::simcom(SoftwareSerial *serial, uint16_t pwrPin)
     _serial = serial;
 }
 
-void simcom::begin() {
+int8_t simcom::begin() {
     _serial->begin(9600);
     pinMode(_pwrPin, OUTPUT);
     digitalWrite(_pwrPin, 0);
+    return 0;
 }
 
 simcom::~simcom() {
     _serial->end();
+}
+
+int8_t simcom::powerdown() {
+    return 0;
+}
+
+int8_t simcom::powerup() {
+
+    return 0;
+}
+
+int8_t simcom::httpGET(const char* url) {
+    
+    return 0;
 }

@@ -22,11 +22,11 @@ private:
 public:
     simcom(SoftwareSerial *serial, uint16_t pwrPin);
     ~simcom();
-    void begin();
-    void powerdown();
-    void powerup();
-    void httpGET(const char*);
-    void httpPOST(const char*);
+    int8_t begin();
+    int8_t powerdown();
+    int8_t powerup();
+    int8_t httpGET(const char*);
+    int8_t httpPOST(const char*);
 
 };
 
