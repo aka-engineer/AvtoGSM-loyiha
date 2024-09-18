@@ -33,6 +33,9 @@ int8_t simcom::powerOFF() {
 }
 
 int8_t simcom::httpGET(const char* url, const char* data, uint16_t datalen) {
+    /* 
+    http://aka2engineer.pythonanywhere.com/put/?imei=12375129386&name=helloaka&location=124.12412,123124.123&height=1234&weight=45123&temperature=23.4
+    */
     
     return 0;
 }
