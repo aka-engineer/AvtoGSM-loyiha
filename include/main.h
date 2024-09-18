@@ -24,6 +24,8 @@
 #define SerialUSX Serial2
 #endif
 
+#include <stdio.h>
+#include <Arduino.h>
 #include <SoftwareSerial.h>
 #include "simcom.h"
 #include <DS18B20.h>

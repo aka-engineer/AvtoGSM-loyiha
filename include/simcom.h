@@ -23,11 +23,22 @@ public:
     simcom(SoftwareSerial *serial, uint16_t pwrPin);
     ~simcom();
     int8_t begin();
-    int8_t powerdown();
-    int8_t powerup();
-    int8_t httpGET(const char*);
-    int8_t httpPOST(const char*);
-
+    int8_t powerON();
+    int8_t powerOFF();
+    int8_t httpGET(const char* url, const char* data, uint16_t datalen);
+    int8_t httpPOST(const char* url, const char* data, uint16_t datalen);
+    int8_t setAPN(const char*);
+    int8_t attachGPRS();
+    int8_t detachGPRS();
+    int8_t attachGPS();
+    int8_t detachGPS();
+    int8_t getGPSInfo(char* gpsData);
+    int8_t getIP(char* ipAddress);
+    int8_t getIMEI(char* imei);
+    int8_t getBATInfo(bool volt_percent=false); /* If true retur voltage in millivolts else percent */
+    int8_t getRSSI();
+    int8_t sendSMS(const char* number, const char* message);
+    void handle();
 };
 
 
